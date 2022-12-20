@@ -1,0 +1,60 @@
+.container {
+    margin: 0 auto;
+    padding: 105px 0;
+    max-width: 1200px;
+}
+
+#contact {
+
+    .title {
+
+        h2 {
+            color: #5BE8C9;
+            text-align: center;
+        }
+
+        button {
+            color: white;
+            border: #5BE8C9 solid 0.1rem;
+            border-radius: 20px;
+            background-color: transparent;
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .contact-me {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .img {
+            max-width: 20rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        button {
+            background-color: transparent;
+            border: #5BE8C9 solid 0.1rem;
+            border-radius: 20px;
+            padding: 1.2rem;
+            transition: all 0.2s ease-in-out;
+
+
+            &:hover {
+                transform: scale(1.06);
+                cursor: pointer;
+                background-color: #5BE8C9;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}

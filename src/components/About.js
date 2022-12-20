@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Sass/Homepage.scss'
+import '../Sass/About.scss'
 import '../Sass/App.scss'
 import me from '../img-me/me.png'
 import astronaut from '../img-me/me-astronaut.png'
@@ -9,33 +9,27 @@ import css from '../logos/css.png'
 import html from '../logos/html.png'
 import javascript from '../logos/jaavscript2.png'
 import react from '../logos/react.png'
-import greenplanet from '../img-planets/green-planet.png'
-import saturne from '../img-planets/saturn.png'
-import purpleplanet from '../img-planets/marshmallow-planet.png'
+import Navbar from './Navbar'
+import Footer from './Footer'
+import { GrNext, GrPrevious } from "react-icons/gr";
+import { FaChevronRight } from "react-icons/fa";
 
-const Homepage = () => {
+const About = () => {
 
 
     return (
         <body>
-            <header>
-                <div className="container">
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#about">A propos de moi</a>
-                            </li>
-                            <li>
-                                <a href="#work">Mes réalisations</a>
-                            </li>
-                            <li>
-                                <a href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            <Navbar />
             <main>
+
+                <div class="page-control">
+
+                    <a href="/work" class="next">
+                        <span color='white'><FaChevronRight/></span>
+                    </a>
+
+                </div>
+
                 <div id="about" className='container'>
                     <div className="title">
                         <h2>A propos de moi</h2>
@@ -45,9 +39,9 @@ const Homepage = () => {
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus veritatis fugit cupiditate quasi ex unde aut sapiente et iste ut omnis, laudantium ullam aspernatur molestias debitis ipsam, at error quisquam?</p>
 
                         <div className="skills">
-                            <img src={bootstrap} alt="bootstrap" />
                             <img src={css} alt="css" />
                             <img src={html} alt="html" />
+                            <img src={bootstrap} alt="bootstrap" />
                             <img src={javascript} alt="javascript" />
                             <img src={react} alt="react" />
                         </div>
@@ -59,19 +53,14 @@ const Homepage = () => {
                     </div>
                 </div>
 
-                <div id="work" className='container'>
-                    <div className="title">
-                        <h2>Mes réalisations</h2>
-                    </div>
-                    <div className="img-work">
-                        <img src={greenplanet} alt="" />
-                        <img src={saturne} alt="" />
-                        <img src={purpleplanet} alt="" />
-                    </div>
-                </div>
+
             </main>
+            <footer>
+                <Footer />
+            </footer>
         </body>
+
     )
 }
 
-export default Homepage
+export default About

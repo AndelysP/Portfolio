@@ -53,7 +53,7 @@ const Welcome = () => {
         <div id="text">
           <h1>Andélys Pluquin</h1>
         </div>
-        <Link to="/homepage">
+        <Link to="/about">
         <button>Bienvenue sur mon portfolio</button>
         </Link>
       </div>

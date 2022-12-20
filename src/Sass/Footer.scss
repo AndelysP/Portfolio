@@ -1,0 +1,18 @@
+.footer-container {
+    background-color:rgba(0, 89, 255, 0.295);
+    color: white;
+    text-align: center;
+}
+
+.social-bar {
+    width: 100%;
+    
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        opacity: 1;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}

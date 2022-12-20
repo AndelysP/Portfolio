@@ -1,47 +1,7 @@
 .container {
     margin: 0 auto;
-    padding: 5rem 2rem;
+    padding: 105px 0;
     max-width: 1200px;
-}
-
-nav {
-    position: fixed;
-    top: 1rem;
-    right: 8rem;
-    font-size: 1rem;
-
-    ul li {
-        display: inline-block;
-        margin-bottom: 1rem;
-        padding: 0.5rem 3rem;
-
-        a {
-            color: white;
-            text-decoration: none;
-            position: relative;
-
-            &:hover {
-                color: #5BE8C9;
-            }
-
-            &::after {
-                content: '';
-                width: 0%;
-                height: 3px;
-                position: absolute;
-                top: 25px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: #5BE8C9;
-                transition: width 0.6s;
-            }
-        }
-    }
-}
-
-
-nav ul li a:hover::after {
-    width: 50%;
 }
 
 #about {
@@ -66,6 +26,13 @@ nav ul li a:hover::after {
             background-color: transparent;
             padding: 1rem 2rem;
             margin-top: 1rem;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #5BE8C9;
+                transform: scale(1.12);
+                cursor: pointer;
+            }
         }
     }
 
@@ -108,28 +75,38 @@ nav ul li a:hover::after {
 
 }
 
-#work {
-    .title {
-        p {
-            color: rgb(194, 194, 194);
-            font-size: 1rem;
-        }
+.page-control {
+    visibility: visible;
 
-        h2 {
-            color: #5BE8C9;
+    a {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        position: fixed;
+        top: 25%;
+        height: 50%;
+        right: 0;
+        width: 150px;
+
+        .span {
             text-align: center;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            height: 36px;
+            width: 36px;
+            top: calc(50% - 18.5px);
+            left: calc(50% - 18px);
         }
     }
+}
 
-    .img-work {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        img {
-            width: 200px;
-            height: 200px;
-        }
+@media only screen and (max-width: 800px) {
+    .page-control {
+        visibility: hidden;
     }
 }

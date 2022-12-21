@@ -11,26 +11,25 @@ import javascript from '../logos/jaavscript2.png'
 import react from '../logos/react.png'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { GrNext, GrPrevious } from "react-icons/gr";
 import { FaChevronRight } from "react-icons/fa";
+import Image from './Image'
 
 const About = () => {
 
-
     return (
+        <div className="noise">
         <body>
             <Navbar />
             <main>
 
                 <div class="page-control">
-
                     <a href="/work" class="next">
-                        <span color='white'><FaChevronRight/></span>
+                        <span><FaChevronRight/></span>
                     </a>
-
                 </div>
 
                 <div id="about" className='container'>
+                    
                     <div className="title">
                         <h2>A propos de moi</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus similique dolorem veritatis, culpa numquam adipisci consequatur. Pariatur praesentium architecto exercitationem aut minus. Quae deleniti totam ad! In expedita voluptas quis.
@@ -48,7 +47,7 @@ const About = () => {
                         <button>Mon CV</button>
                     </div>
                     <div className="img-container">
-                        <img id="img1" src={me} alt="" />
+                        <Image/>
                         <span>Cliquez sur moi !</span>
                     </div>
                 </div>
@@ -59,6 +58,7 @@ const About = () => {
                 <Footer />
             </footer>
         </body>
+        </div>
 
     )
 }

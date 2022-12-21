@@ -1,10 +1,13 @@
 .container {
     margin: 0 auto;
-    padding: 105px 0;
+    padding: 40px 0;
     max-width: 1200px;
 }
 
 #work {
+
+    height: 90vh;
+
     .title {
         p {
             color: rgb(194, 194, 194);
@@ -17,19 +20,114 @@
         }
     }
 
-    .img-work {
+    .portfolio-wrap {
         display: flex;
-        justify-content: center;
-        padding-top: 2rem;
+        flex-wrap: wrap;
 
-        img {
-            width: 100%;
-            padding: 1rem;
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
 
-            &:hover {
-                background-color: #5BE8C9;
+            img {
+                width: 100%;
+            }
+
+            figcaption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-size: 1rem;
+                height: 30%;
+                color: rgba(245, 245, 220, 0);
+                padding: 0 1rem;
+                transform: translateY(-1rem);
+                transition: all 1s;
+                margin: 0 1rem;
+                border-radius: 2rem;
+            }
+
+            &:hover figcaption {
+                background-color: #394fa077;
+                color: white;
+                transform: translateY(0);
             }
         }
 
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;           
+
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                svg {
+                    fill: white;
+                    font-size: 2rem;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        fill: #5BE8C9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.page-control {
+    visibility: visible;
+
+    svg {
+        width: 40px;
+        height: 40px;
+        fill: rgb(218, 218, 218);
+        padding: 0;
+        margin: 0;
+        display: block;
+        position: absolute;
+        top: calc(50% - 18.5px);
+        left: calc(50% - 18px);
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.12);
+        }
+    }
+
+    .next {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        position: fixed;
+        top: 25%;
+        height: 50%;
+        right: 0;
+        width: 80px;
+    }
+
+    .prev {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        position: fixed;
+        top: 25%;
+        height: 50%;
+        left: 0;
+        width: 80px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .page-control {
+        visibility: hidden;
     }
 }

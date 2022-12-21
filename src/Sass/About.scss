@@ -1,15 +1,14 @@
 .container {
     margin: 0 auto;
-    padding: 105px 0;
+    padding: 40px 0;
     max-width: 1200px;
 }
 
 #about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    
     .title {
+        padding: 1rem;
+
         p {
             color: rgb(194, 194, 194);
             font-size: 1rem;
@@ -37,11 +36,14 @@
     }
 
     .img-container {
-        width: 200%;
-        padding-left: 3rem;
+        padding: 1rem;
 
         img {
             width: 100%;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         span {
@@ -78,35 +80,70 @@
 .page-control {
     visibility: visible;
 
+    svg {
+        width: 40px;
+        height: 40px;
+        fill: rgb(218, 218, 218);
+        padding: 0;
+        margin: 0;
+        display: block;
+        position: absolute;
+        top: calc(50% - 18.5px);
+        left: calc(50% - 18px);
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.12);
+        }
+    }
+
     a {
         text-align: center;
         padding: 0;
         margin: 0;
-        box-sizing: border-box;
         text-decoration: none;
         position: fixed;
         top: 25%;
         height: 50%;
         right: 0;
-        width: 150px;
-
-        .span {
-            text-align: center;
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            display: block;
-            position: absolute;
-            height: 36px;
-            width: 36px;
-            top: calc(50% - 18.5px);
-            left: calc(50% - 18px);
-        }
+        width: 80px;
     }
 }
 
 @media only screen and (max-width: 800px) {
     .page-control {
         visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    #about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+
+    .img-container {
+        width: 130rem;
+
+        img {
+            width: 100%;
+            animation: float 6s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
     }
 }

@@ -1,5 +1,6 @@
 html {
     height: 100%;
+
     // overflow: hidden;
     body {
         background-color: #0C1121;
@@ -19,7 +20,7 @@ html {
 }
 
 #planets2 {
-    img{
+    img {
         position: absolute;
         right: 0;
         bottom: 0;
@@ -40,8 +41,6 @@ html {
     }
 }
 
-
-
 #title {
     position: absolute;
     top: 50%;
@@ -53,21 +52,37 @@ html {
     letter-spacing: 5px;
     margin-top: -60px;
     padding-left: 10px;
+}
 
-    button {
-        padding: 1.2rem;
-        background-color: transparent;
-        border: 0.1px solid #5be8c9;
-        border-radius: 1rem;
-        color: white;
-        text-transform: uppercase;
-        transition: all 0.2s ease-in-out;
 
-        &:hover {
-            background-color: #5BE8C9;
-            transform: scale(1.12);
-            cursor: pointer;
-        }
+button {
+    padding: 1.2rem;
+    background-color: transparent;
+    border: 0.1px solid #5be8c9;
+    border-radius: 1rem;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #5BE8C9;
+        transform: scale(1.12);
+        cursor: pointer;
+    }
+}
+
+
+@keyframes cursor {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 

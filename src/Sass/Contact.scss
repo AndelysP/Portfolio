@@ -1,13 +1,17 @@
 .container {
     margin: 0 auto;
-    padding: 105px 0;
+    padding: 40px 0;
     max-width: 1200px;
 }
 
 #contact {
 
+    height: 90vh;
+
     .title {
 
+        padding: 1rem;
+        
         h2 {
             color: #5BE8C9;
             text-align: center;
@@ -56,5 +60,43 @@
                 color: white;
             }
         }
+    }
+}
+
+.page-control {
+    visibility: visible;
+
+    svg {
+        width: 40px;
+        height: 40px;
+        fill: rgb(218, 218, 218);
+        padding: 0;
+        margin: 0;
+        display: block;
+        position: absolute;
+        top: calc(50% - 18.5px);
+        left: calc(50% - 18px);
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.12);
+        }
+    }
+
+    .prev {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        position: fixed;
+        top: 25%;
+        height: 50%;
+        left: 0;
+        width: 80px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .page-control {
+        visibility: hidden;
     }
 }

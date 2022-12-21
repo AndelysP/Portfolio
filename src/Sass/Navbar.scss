@@ -1,23 +1,54 @@
 header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 80px;
-    padding: 0 2rem;
-    background: linear-gradient(#1b2444, #0c1121cb);
-    color: white;
-    font-size: 1.1rem;
-
-    nav a {
-        margin: 0 2rem;
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        padding: 0 2rem;
+        background: linear-gradient(#1b2444, #0c1121cb);
         color: white;
-        text-decoration: none;
+        font-size: 1.1rem;
+    }
 
-        &:hover {
-            color: aqua;
+    span {
+        svg {
+            font-size: 3rem;
+            text-decoration: none;
+            fill: white;
         }
     }
+
+
+    nav {
+        a {
+            margin: 0 2rem;
+            color: white;
+            text-decoration: none;
+            position: relative;
+
+            &:hover {
+                color: #5BE8C9;
+            }
+        }
+    }
+
+    nav a::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #5BE8C9;
+        transition: width 0.3s;
+    }
 }
+
+nav a:hover::after {
+    width: 50%;
+}
+
 
 .nav-btn {
     padding: 5px;
@@ -38,6 +69,7 @@ header {
     }
 
     header nav {
+        z-index: 2;
         position: fixed;
         top: 0;
         right: 0;
@@ -48,7 +80,7 @@ header {
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        background-color:  #0c1121;
+        background-color: #0c1121;
         transition: 1s;
         transform: translateY(-100vh);
 

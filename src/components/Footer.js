@@ -4,17 +4,17 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Footer = () => {
     return (
-        <div>
-            <footer>
-                <div class="footer-container">
-                    &copy; Copyright Andélys Pluquin - 2022
-                    <div class="social-bar">
-                        <a href="https://github.com/AndelysP" title=""><AiFillGithub /></a>
-                        <a href="https://www.linkedin.com/in/and%C3%A9lys-pluquin/" title=""><AiFillLinkedin /></a>
-                    </div>
+        <footer>
+            <div class="footer-content">
+                <ul class="socials">
+                    <li><a href="https://github.com/AndelysP" title=""><AiFillGithub /></a></li>
+                    <li><a href="https://www.linkedin.com/in/and%C3%A9lys-pluquin/" title=""><AiFillLinkedin /></a></li>
+                </ul>
+                <div className="footer-bottom">
+                    <p>Made with ☕ - &copy;2022 - designed by <span>Andélys Pluquin</span></p>
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
     )
 }
 

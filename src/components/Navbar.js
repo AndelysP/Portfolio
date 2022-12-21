@@ -28,10 +28,11 @@ const Navbar = () => {
                         <RxCross1 />
                     </button>
                 </nav>
-            </div>
-            <button className='nav-btn' onClick={showNavbar}>
+                <button className='nav-btn' onClick={showNavbar}>
                 <HiBars3 />
             </button>
+            </div>
+            
         </header>
     )
 }

@@ -12,6 +12,10 @@ class Image extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
+    
+    /**
+     * Si l'index est égal à la longueur du tableau, l'index est sur 0. Sinon, il est incrémenté de 1
+     */
     handleClick() {
        if (this.state.index === this.state.images.length -1) {
         this.setState({index:0});

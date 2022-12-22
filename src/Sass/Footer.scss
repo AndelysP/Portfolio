@@ -2,13 +2,14 @@ footer {
     background-color: #02021188;
     height: auto;
     color: white;
+    
 
     .footer-content {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        text-align: center;
+        text-align: center;        
 
         .socials {
             list-style: none;
@@ -34,7 +35,7 @@ footer {
     }
 
     .footer-bottom {
-        width: 100vw;
+        width: 95vw;
         text-align: center;
 
         p{

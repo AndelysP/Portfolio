@@ -3,6 +3,8 @@
     flex-direction: column;
     text-align: center;
     height: 90vh;
+    font-size: 25px;
+    padding: 2rem;
 
     h1 {
         color: #5BE8C9;
@@ -21,6 +23,7 @@
         transition: all 0.2s ease-in-out;
         color: white;
         font-family: 'Space Mono', monospace;
+        font-size: 15px;
 
 
         &:hover {

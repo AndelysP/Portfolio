@@ -139,6 +139,12 @@
     .page-control {
         visibility: hidden;
     }
+
+    figcaption {
+        p {
+            margin: 0;
+        }
+    }
 }
 
 // Pour régler le bug d'affichage du footer sur la page Mes projets 

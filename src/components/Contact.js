@@ -9,32 +9,25 @@ import { Link } from 'react-router-dom'
 const Contact = () => {
   return (
     <div className="noise">
-      <div>
-
-        <Navbar />
-
-        <div className="page-control">
-          <Link to="/work" class="prev">
-            <span><FaChevronLeft /></span>
-          </Link>
-        </div>
-
-        <div id="contact" className='container'>
-          <div className="title">
-            <h2>Contactez-moi !</h2>
-          </div>
-          <div className="contact-me">
-            <div className="img">
-              <img src={contact} alt="" />
-            </div>
-            <button><a href="https://www.linkedin.com/in/and%C3%A9lys-pluquin/">Faîtes biper mon antenne !</a></button>
-          </div>
-        </div>
-
-
-        <Footer />
-
+      <Navbar />
+      <div className="page-control">
+        <Link to="/work" className="prev">
+          <span><FaChevronLeft /></span>
+        </Link>
       </div>
+
+      <div id="contact" className='container'>
+        <div className="title">
+          <h2>Restons en contact !</h2>
+        </div>
+        <div className="contact-me">
+          <div className="img">
+            <img src={contact} alt="" />
+          </div>
+          <button><a href="https://www.linkedin.com/in/and%C3%A9lys-pluquin/">Faîtes biper mon antenne !</a></button>
+        </div>
+      </div>
+      <Footer />
     </div>
   )
 }

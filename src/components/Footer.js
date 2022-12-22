@@ -5,8 +5,8 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 const Footer = () => {
     return (
         <footer>
-            <div class="footer-content">
-                <ul class="socials">
+            <div className="footer-content">
+                <ul className="socials">
                     <li><a href="https://github.com/AndelysP" title=""><AiFillGithub /></a></li>
                     <li><a href="https://www.linkedin.com/in/and%C3%A9lys-pluquin/" title=""><AiFillLinkedin /></a></li>
                 </ul>

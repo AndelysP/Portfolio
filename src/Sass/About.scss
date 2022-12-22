@@ -11,7 +11,7 @@
         
         p {
             color: rgb(194, 194, 194);
-            font-size: 1rem;
+            font-size: 0.9rem;
             span {
                 color:#5BE8C9;
             }
@@ -27,6 +27,8 @@
         }
 
         button {
+            display: flex;
+            align-items: center;
             color: white;
             border: #5BE8C9 solid 0.1rem;
             border-radius: 20px;
@@ -35,6 +37,7 @@
             margin-top: 1rem;
             transition: all 0.2s ease-in-out;
             font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
 
             &:hover {
                 background-color: #5BE8C9;
@@ -66,15 +69,11 @@
         }
 
         span {
-            visibility: hidden;
             text-align: center;
             color: white;
             font-size: 0.8rem;
+            padding-left: 2rem;
         }
-    }
-
-    .img-container img:hover+span {
-        visibility: visible;
     }
 
     .skills {
@@ -105,7 +104,7 @@
         transition: all 0.2s ease-in-out;
 
         &:hover {
-            transform: scale(1.12);
+            transform: scale(1.2);
         }
     }
 
@@ -126,6 +125,10 @@
     .page-control {
         visibility: hidden;
     }
+
+    .img-container{
+        width: 22rem;
+    }
 }
 
 @media only screen and (min-width: 801px) {
@@ -138,7 +141,6 @@
 
     .img-container {
         width: 130rem;
-
         img {
             width: 100%;
             animation: float 6s ease-in-out infinite;

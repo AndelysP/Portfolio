@@ -8,14 +8,6 @@ import Contact from './components/Contact';
 const App = () => {
   return (
     <div>
-      <header>
-      <Welcome />
-      </header>
-      <main>
-      <About />
-      <Project />
-      <Contact />
-      </main>
     </div>
   )
 }

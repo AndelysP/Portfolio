@@ -48,6 +48,10 @@
                 h3 {
                     margin: 0;
                 }
+
+                p {
+                    font-size: 0.9rem;
+                }
             }
 
             &:hover figcaption {
@@ -63,7 +67,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;           
+            height: 100%;
 
             a {
                 position: absolute;
@@ -101,7 +105,7 @@
         transition: all 0.2s ease-in-out;
 
         &:hover {
-            transform: scale(1.12);
+            transform: scale(1.2);
         }
     }
 
@@ -114,6 +118,7 @@
         height: 50%;
         right: 0;
         width: 80px;
+        z-index: 3;
     }
 
     .prev {
@@ -125,6 +130,7 @@
         height: 50%;
         left: 0;
         width: 80px;
+        z-index: 3;
     }
 
 }
@@ -132,5 +138,12 @@
 @media only screen and (max-width: 800px) {
     .page-control {
         visibility: hidden;
+    }
+}
+
+// Pour régler le bug d'affichage du footer sur la page Mes projets 
+@media only screen and (min-width:768px) {
+    #work {
+        height: 90vh;
     }
 }

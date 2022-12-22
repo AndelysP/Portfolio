@@ -13,7 +13,6 @@ const Navbar = () => {
         navRef.current.classList.toggle("responsive_nav");
     }
 
-
     return (
         <header>
             <div className="navbar">
@@ -29,10 +28,9 @@ const Navbar = () => {
                     </button>
                 </nav>
                 <button className='nav-btn' onClick={showNavbar}>
-                <HiBars3 />
-            </button>
+                    <HiBars3 />
+                </button>
             </div>
-            
         </header>
     )
 }

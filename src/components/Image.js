@@ -11,7 +11,6 @@ class Image extends Component {
         };
         this.handleClick = this.handleClick.bind(this);
     }
-
     
     /**
      * Si l'index est égal à la longueur du tableau, l'index est sur 0. Sinon, il est incrémenté de 1

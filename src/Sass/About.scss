@@ -4,21 +4,22 @@
     max-width: 1200px;
 }
 
-
-#about {    
+#about {
     .title {
         padding: 1rem;
-        
+
         p {
             color: rgb(194, 194, 194);
             font-size: 0.9rem;
+
             span {
-                color:#5BE8C9;
+                color: #5BE8C9;
             }
         }
-        .hard-skills svg{
-                font-size: 2rem;
-            }
+
+        .hard-skills svg {
+            font-size: 2rem;
+        }
 
         h2 {
             color: #5BE8C9;
@@ -45,7 +46,7 @@
                 cursor: pointer;
             }
 
-            a{
+            a {
                 text-decoration: none;
                 color: white;
             }
@@ -80,6 +81,7 @@
         svg {
             color: white;
             font-size: 2.8rem;
+
             &:hover {
                 color: #5BE8C9;
             }
@@ -126,7 +128,7 @@
         visibility: hidden;
     }
 
-    .img-container{
+    .img-container {
         width: 22rem;
     }
 }
@@ -141,6 +143,7 @@
 
     .img-container {
         width: 130rem;
+
         img {
             width: 100%;
             animation: float 6s ease-in-out infinite;

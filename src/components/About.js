@@ -1,63 +1,55 @@
 import React from 'react'
 import '../Sass/About.scss'
 import '../Sass/App.scss'
-import me from '../img-me/me.png'
-import astronaut from '../img-me/me-astronaut.png'
-import { useState } from 'react'
-import bootstrap from '../logos/bootstrap.png'
-import css from '../logos/css.png'
-import html from '../logos/html.png'
-import javascript from '../logos/jaavscript2.png'
-import react from '../logos/react.png'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronRight, FaBootstrap, FaHtml5, FaCss3Alt, FaReact} from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import { SiRedux } from "react-icons/si";
 import Image from './Image'
+import cv from '../andelys_pluquin_cv.pdf'
+import { Link } from 'react-router-dom'
 
 const About = () => {
 
     return (
         <div className="noise">
-        <body>
-            <Navbar />
-            <main>
+                <body>
+                    <Navbar />
+                    <main>
 
-                <div class="page-control">
-                    <a href="/work" class="next">
-                        <span><FaChevronRight/></span>
-                    </a>
-                </div>
-
-                <div id="about" className='container'>
-                    
-                    <div className="title">
-                        <h2>A propos de moi</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus similique dolorem veritatis, culpa numquam adipisci consequatur. Pariatur praesentium architecto exercitationem aut minus. Quae deleniti totam ad! In expedita voluptas quis.
-                            Tenetur et quam laudantium, ducimus dolor nobis minus unde quae maxime aut asperiores adipisci ex distinctio officiis sequi alias eius temporibus. Eius eos deleniti veritatis rem eveniet ipsum commodi enim?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In temporibus reiciendis inventore doloremque totam ullam quibusdam, aut fugiat. Impedit, ea veniam quis laboriosam officia perferendis ipsa molestias aliquam cum harum!
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus veritatis fugit cupiditate quasi ex unde aut sapiente et iste ut omnis, laudantium ullam aspernatur molestias debitis ipsam, at error quisquam?</p>
-
-                        <div className="skills">
-                            <img src={css} alt="css" />
-                            <img src={html} alt="html" />
-                            <img src={bootstrap} alt="bootstrap" />
-                            <img src={javascript} alt="javascript" />
-                            <img src={react} alt="react" />
+                        <div className="page-control">
+                            <Link to="/work" className="next">
+                                <span><FaChevronRight /></span>
+                            </Link>
                         </div>
-                        <button>Mon CV</button>
-                    </div>
-                    <div className="img-container">
-                        <Image/>
-                        <span>Cliquez sur moi !</span>
-                    </div>
-                </div>
+
+                        <div id="about" className='container'>
+
+                            <div className="title">
+                                <h2>A propos de moi</h2>
+                                <p>Hello ! Je m'appelle <span>Andélys</span>, originaire du nord de la France, j'entreprends actuellement une reconversion professionnelle pour devenir <span>Développeuse Fullstack</span>. Auparavant, j'ai commencé à apprendre en autodidacte avec OpenClassrooms et d'autres ressources publiques, maintenant je suis la formation Développeur Web/Web Mobile au sein de <span>M2i</span> à Villeneuve d'Ascq. Mon intérêt pour l'informatique a commencé dès mon plus jeune âge, et c'est après une longue réflexion que je me suis lancée ce défi de reconversion. 🚀 Je suis passionnée par <span>l'astronomie</span> et les nouvelles technologies. Je suis à la recherche d'un <span>stage</span> pour mettre en pratique toutes les compétences que j'aurai eu l'occasion de voir durant ma formation mais également de me perfectionner auprès de personnes compétentes ! Peut-être que mon voyage se poursuivra avec vous ! En attendant, je continue de travailler chaque jour avec <span>passion</span> et des idées pleins la tête. ✨</p>
+                                <p> <span>Soft skills:</span>  Empathie, persévérance, esprit d'équipe, gestion du temps</p>
+                                <p> <span>Hard skills :</span>  HTML, CSS, Javascript, React, Redux, Bootstrap...</p>
+                                <div className="skills">
+                                <FaHtml5/> <FaCss3Alt/> <IoLogoJavascript/> <FaReact/> <SiRedux/> <FaBootstrap/> 
+                                </div>
+                                <button><a href={cv} download="CV Andélys_Pluquin">Mon CV <IoDocumentTextOutline/> </a></button>
+                            </div>
+
+                            <div className="img-container">
+                                <Image />
+                                <span>Cliquez sur moi !</span>
+                            </div>
+                        </div>
 
 
-            </main>
-            <footer>
-                <Footer />
-            </footer>
-        </body>
+                    </main>
+                    <footer>
+                        <Footer />
+                    </footer>
+                </body>            
         </div>
 
     )

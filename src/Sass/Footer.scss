@@ -26,7 +26,7 @@ footer {
                     color: white;
 
                     svg {
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
                     }
                 }
             }
@@ -40,7 +40,9 @@ footer {
         p{
             word-spacing: 2px;
             text-transform: capitalize;
-            margin: 1rem 0;
+            margin: 0;
+            padding-bottom: 1rem;
+            font-size: 0.8rem;
 
             span {
                 opacity: 0.6;

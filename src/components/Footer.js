@@ -11,7 +11,7 @@ const Footer = () => {
                     <li><a href="https://www.linkedin.com/in/and%C3%A9lys-pluquin/" title=""><AiFillLinkedin /></a></li>
                 </ul>
                 <div className="footer-bottom">
-                    <p>Made with ☕ - &copy;2022 - designed by <span>Andélys Pluquin</span></p>
+                    <p>Made with ☕ - &copy;2022 - designed by <span>Andélys Pluquin</span> - Image by Freepik</p>
                 </div>
             </div>
         </footer>

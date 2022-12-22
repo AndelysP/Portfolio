@@ -5,9 +5,6 @@
 }
 
 #work {
-
-    height: 90vh;
-
     .title {
         p {
             color: rgb(194, 194, 194);
@@ -17,6 +14,7 @@
         h2 {
             color: #5BE8C9;
             text-align: center;
+            font-family: 'pokemon_classic';
         }
     }
 
@@ -46,11 +44,16 @@
                 transition: all 1s;
                 margin: 0 1rem;
                 border-radius: 2rem;
+
+                h3 {
+                    margin: 0;
+                }
             }
 
             &:hover figcaption {
                 background-color: #394fa077;
                 color: white;
+                text-shadow: 5px 5px #12202c;
                 transform: translateY(0);
             }
         }

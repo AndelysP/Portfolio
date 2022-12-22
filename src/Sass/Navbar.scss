@@ -7,14 +7,18 @@ header {
         padding: 0 2rem;
         background: linear-gradient(#1b2444, #0c1121cb);
         color: white;
-        font-size: 1.1rem;
+        font-size: 0.8rem;
+        font-family: 'pokemon_classic';
     }
 
     span {
         svg {
             font-size: 3rem;
             text-decoration: none;
-            fill: white;
+            color: white;
+            &:hover{
+                color: #5BE8C9;
+            }
         }
     }
 

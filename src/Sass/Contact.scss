@@ -15,15 +15,7 @@
         h2 {
             color: #5BE8C9;
             text-align: center;
-        }
-
-        button {
-            color: white;
-            border: #5BE8C9 solid 0.1rem;
-            border-radius: 20px;
-            background-color: transparent;
-            padding: 1rem 2rem;
-            margin-top: 1rem;
+            font-family: 'pokemon_classic';
         }
     }
 
@@ -47,6 +39,8 @@
             border-radius: 20px;
             padding: 1.2rem;
             transition: all 0.2s ease-in-out;
+            font-family: 'Space Mono', monospace;
+            animation: pulse-red 2s infinite;
 
 
             &:hover {
@@ -62,6 +56,23 @@
         }
     }
 }
+
+@keyframes pulse-red {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+    }
+    
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+    }
+    
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
+  }
 
 .page-control {
     visibility: visible;

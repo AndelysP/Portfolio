@@ -1,8 +1,6 @@
 import React from 'react';
 import '../Sass/Welcome.scss';
-import moon from '../img/moon.png'
 import neptune from '../img/neptune.png'
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Welcome = () => {
@@ -23,15 +21,13 @@ const Welcome = () => {
           </Link>
         </div>
         <div className="planets-img">
+          
           <div id="planets1">
-            <img src={moon} alt="moon" />
-          </div>
-          <div id="planets2">
             <img src={neptune} alt="neptune" />
           </div>
         </div>
       </div>
-    </section>
+    </section>    
   )
 }
 

@@ -1,0 +1,36 @@
+.text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        color: #5BE8C9;
+        font-family: 'pokemon_classic';
+    }
+
+    p {
+        color: white;
+    }
+
+    button {
+        background-color: transparent;
+        border: #5BE8C9 solid 0.1rem;
+        border-radius: 20px;
+        padding: 1.2rem;
+        transition: all 0.2s ease-in-out;
+        color: white;
+        font-family: 'Space Mono', monospace;
+
+
+        &:hover {
+            transform: scale(1.06);
+            cursor: pointer;
+            background-color: #5BE8C9;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

@@ -4,6 +4,7 @@ import contact from '../img-me/contact.png'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { FaChevronLeft } from "react-icons/fa";
+import { Link } from 'react-router-dom'
 
 const Contact = () => {
   return (
@@ -12,10 +13,10 @@ const Contact = () => {
 
         <Navbar />
 
-        <div class="page-control">
-          <a href="/work" class="prev">
+        <div className="page-control">
+          <Link to="/work" class="prev">
             <span><FaChevronLeft /></span>
-          </a>
+          </Link>
         </div>
 
         <div id="contact" className='container'>

@@ -4,18 +4,26 @@
     max-width: 1200px;
 }
 
-#about {
-    
+
+#about {    
     .title {
         padding: 1rem;
-
+        
         p {
             color: rgb(194, 194, 194);
             font-size: 1rem;
+            span {
+                color:#5BE8C9;
+            }
         }
+        .hard-skills svg{
+                font-size: 2rem;
+            }
 
         h2 {
             color: #5BE8C9;
+            font-family: 'pokemon_classic';
+            font-size: 1.3rem;
         }
 
         button {
@@ -26,11 +34,22 @@
             padding: 1rem 2rem;
             margin-top: 1rem;
             transition: all 0.2s ease-in-out;
+            font-family: 'Space Mono', monospace;
 
             &:hover {
                 background-color: #5BE8C9;
                 transform: scale(1.12);
                 cursor: pointer;
+            }
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
+
+            svg {
+                font-size: 1.3rem;
+                margin-left: 0.5rem;
             }
         }
     }
@@ -59,16 +78,9 @@
     }
 
     .skills {
-        display: flex;
-        justify-content: space-between;
-        width: 50px;
-
-        img {
-            margin: auto;
-            width: 100%;
-            padding: 0.5rem;
-            transition: all 0.3s ease;
-
+        svg {
+            color: white;
+            font-size: 2.8rem;
             &:hover {
                 color: #5BE8C9;
             }

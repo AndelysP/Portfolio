@@ -3,6 +3,10 @@ import '../Sass/Footer.scss'
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Footer = () => {
+
+    let today = new Date();
+    let year = today.getFullYear();
+
     return (
         <footer>
             <div className="footer-content">
@@ -11,7 +15,7 @@ const Footer = () => {
                     <li><a href="https://www.linkedin.com/in/and%C3%A9lys-pluquin/" title=""><AiFillLinkedin /></a></li>
                 </ul>
                 <div className="footer-bottom">
-                    <p>Made with ☕ - &copy;2023 - designed by <span>Andélys Pluquin</span> - Image by Freepik</p>
+                    <p>Made with ☕ - &copy;{year} - designed by <span>Andélys Pluquin</span> - Image by Freepik</p>
                 </div>
             </div>
         </footer>

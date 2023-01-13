@@ -4,90 +4,6 @@
     max-width: 1200px;
 }
 
-#work {
-    .title {
-        p {
-            color: rgb(194, 194, 194);
-            font-size: 1rem;
-        }
-
-        h2 {
-            color: #5BE8C9;
-            text-align: center;
-            font-family: 'pokemon_classic';
-        }
-    }
-
-    .portfolio-wrap {
-        display: flex;
-        flex-wrap: wrap;
-
-        .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            padding: 2rem;
-
-            img {
-                width: 100%;
-            }
-
-            figcaption {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                font-size: 1rem;
-                height: 30%;
-                color: rgba(245, 245, 220, 0);
-                padding: 0 1rem;
-                transform: translateY(-1rem);
-                transition: all 1s;
-                margin: 0 1rem;
-                border-radius: 2rem;
-
-                h3 {
-                    margin: 0;
-                }
-
-                p {
-                    font-size: 0.9rem;
-                }
-            }
-
-            &:hover figcaption {
-                background-color: #394fa077;
-                color: white;
-                text-shadow: 5px 5px #12202c;
-                transform: translateY(0);
-            }
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-
-            a {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-
-                svg {
-                    fill: white;
-                    font-size: 2rem;
-
-                    &:hover {
-                        transform: scale(1.2);
-                        fill: #5BE8C9;
-                    }
-                }
-            }
-        }
-    }
-}
-
 
 .page-control {
     visibility: visible;
@@ -147,9 +63,74 @@
     }
 }
 
-// Pour régler le bug d'affichage du footer sur la page Mes projets 
-@media only screen and (min-width:768px) {
+// Pour régler le bug d'affichage du footer sur la page Mes projets sur grand écran
+@media only screen and (min-width:2400px) {
     #work {
         height: 90vh;
+    }
+}
+
+// Style du composant Card de Ant Design
+
+#work {
+    max-width: 2000px;
+    margin: 0 auto;
+
+    h2 {
+        color: rgb(221, 253, 251);
+        text-align: center;
+        text-decoration: underline;
+    }
+
+
+
+    .listProjects {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .ant-card-cover {
+            height: 20vh;
+            border-radius: 10px;
+            height: 50%;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .ant-card-meta-title {
+            color: #373a44;
+            font-size: 18px;
+        }
+
+        .ant-card-meta-description {
+            height: 50px;
+        }
+
+        .ant-card {
+            &:hover {
+                transform: scale(1.05);
+                border: 4px solid #5be8c969;
+                box-shadow: 5px 15px 30px #5be8c969;
+            }
+        }
+
+        .ant-card-actions {
+            span {
+                font-size: 15px;
+                color: #373a44;
+
+                svg {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    color: #5dc5af;
+                }
+            }
+        }
     }
 }

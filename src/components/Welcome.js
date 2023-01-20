@@ -2,11 +2,13 @@ import React from 'react';
 import '../Sass/Welcome.scss';
 import neptune from '../img/neptune.png'
 import { Link } from 'react-router-dom';
+import Cursor from './Cursor';
 
 const Welcome = () => {
 
   return (
-    <section className="wrapper">
+    <>
+      <Cursor />
       <div className="noise">
         <div id="stars"></div>
         <div id="stars2"></div>
@@ -24,7 +26,7 @@ const Welcome = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   )
 }
 

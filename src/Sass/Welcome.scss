@@ -8,7 +8,8 @@
 
 body {   
     background-color: #0C1121;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Space Mono', monospace;    
+    cursor: none;
 }
 
 #planets1 {
@@ -36,6 +37,7 @@ body {
 #title {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 0;

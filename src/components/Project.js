@@ -8,6 +8,7 @@ import { AiOutlineZoomIn } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { Avatar, Card, Skeleton } from 'antd';
 import projects from '../Projects';
+import Cursor from './Cursor';
 
 const Project = () => {
 
@@ -62,6 +63,7 @@ const Project = () => {
     return (
 
         <>
+            <Cursor />
             <div className="noise">
                 <Navbar />
                 <div className="page-control">

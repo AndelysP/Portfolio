@@ -11,8 +11,8 @@ const Footer = () => {
         <footer>
             <div className="footer-content">
                 <ul className="socials">
-                    <li><a href="https://github.com/AndelysP" title=""><AiFillGithub /></a></li>
-                    <li><a href="https://www.linkedin.com/in/and%C3%A9lys-pluquin/" title=""><AiFillLinkedin /></a></li>
+                    <li><a href="https://github.com/AndelysP" title="" target="_blank"><AiFillGithub /></a></li>
+                    <li><a href="https://www.linkedin.com/in/and%C3%A9lys-pluquin/" title="" target="_blank"><AiFillLinkedin /></a></li>
                 </ul>
                 <div className="footer-bottom">
                     <p>Made with ☕ - &copy;{year} - designed by <span>Andélys Pluquin</span> - Image by Freepik</p>

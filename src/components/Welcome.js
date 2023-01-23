@@ -12,18 +12,14 @@ const Welcome = () => {
       <div className="noise">
         <div id="stars"></div>
         <div id="stars2"></div>
-        <div id="stars3"></div>
-        <div id="title">
+        <div id="stars3"></div>        
+        <div id="welcomeContainer">     
+          <img src={neptune} alt="neptune" />
           <p>Je m'appelle</p>
           <h1>Andélys Pluquin</h1>
           <Link to="/about">
             <button>Bienvenue sur mon portfolio</button>
           </Link>
-        </div>
-        <div className="planets-img">
-          <div id="planets1">
-            <img src={neptune} alt="neptune" />
-          </div>
         </div>
       </div>
     </>

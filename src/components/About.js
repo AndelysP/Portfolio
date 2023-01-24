@@ -8,7 +8,7 @@ import { IoLogoJavascript } from "react-icons/io";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { SiRedux } from "react-icons/si";
 import Image from './Image'
-import cv from '../Andelys_pluquin_cv.pdf'
+import cv from '../andelys_pluquin_cv.pdf'
 import { Link } from 'react-router-dom'
 import Cursor from './Cursor'
 

@@ -14,7 +14,6 @@ import Cursor from './Cursor';
 const Project = () => {
 
     // Animation au chargement d'une page, le useEffect permet de simuler le chargement
-
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -23,11 +22,8 @@ const Project = () => {
         }, 2000);
     }, []);
 
-    const getInfo = () => {
-        alert('La fonction En savoir plus est en cours de développement !');
-    };
-
-    const [showModal, setShowModal] = useState(false);
+    // Variable d'état qui permet de récupérer le bon projet et l'afficher lorsque la modale est activée 
+    const [openModalIndex, setOpenModalIndex] = useState(null);
 
     //
 
@@ -49,9 +45,24 @@ const Project = () => {
                 }
                 actions={[
                     <>
-                        <p onClick={() => setShowModal(true)}>En savoir plus</p><AiOutlineZoomIn />
+                        <p onClick={() => setOpenModalIndex(project)}>En savoir plus</p><AiOutlineZoomIn />
 
-
+                        {/* Si le projet correspond à l'index du projet sur lequel on clique, la modale sera affichée */}
+                        {openModalIndex === project && (
+                            <Modal
+                                title={project.title}
+                                open={openModalIndex}
+                                onCancel={() => setOpenModalIndex(null)}
+                                footer={[
+                                    <Button key="cancel" onClick={() => setOpenModalIndex(null)}>
+                                        Fermer
+                                    </Button>
+                                ]}
+                            >
+                                <h1>{project.title}</h1>
+                                <p>{project.desc}</p>
+                            </Modal>
+                        )}
                     </>
                 ]}
             >
@@ -65,19 +76,7 @@ const Project = () => {
                     />)}
             </Card>
 
-            <Modal
-                title={project.title}
-                open={showModal}
-                onCancel={() => setShowModal(false)}
-                footer={[
-                    <Button key="cancel" onClick={() => setShowModal(false)}>
-                        Fermer
-                    </Button>
-                ]}
-            >
-                <h1>{project.title}</h1>
-                <p>{project.desc}</p>
-            </Modal>
+
         </>
     );
 

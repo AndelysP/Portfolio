@@ -137,3 +137,134 @@
         }
     }
 }
+
+// MODAL
+
+.ant-modal-root {
+    .ant-modal-mask {
+        background-color: rgba(0, 0, 0, 0.0);
+        z-index: 0;
+    }
+
+    .ant-modal-wrap {
+        z-index: 3;
+    }
+
+    .ant-modal-content,
+    .ant-modal-header,
+    .ant-modal-title,
+    .ant-btn-default {
+        background: rgba(255, 255, 255, 0.01);
+        backdrop-filter: blur(40px);
+        color: rgb(255, 255, 255);
+        text-shadow: 6px 1px 10px rgb(0, 0, 0);
+    }
+
+    .ant-btn-default {
+        border: 0.1px solid #5be8c9;
+
+        &:hover {
+            border: none;
+            color: white;
+            background-color: #5BE8C9;
+            transform: scale(1.12);
+            cursor: pointer;
+        }
+    }
+
+    .ant-modal-close {
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.project-wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+
+    @media screen and (max-width: 768px) {
+        display: inline-block;
+    }
+
+    .project-left-wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 50%;
+
+        img {
+            flex-basis: 33.33%;
+            border-radius: 10px;
+            max-width: 30%;
+            margin: 6px;
+
+            @media screen and (max-width: 768px) {
+                max-width: 45%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    .project-right-wrapper {
+        width: 50%;
+        padding-top: 1rem;
+        font-size: 15px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+
+            a {
+                color: #fff;
+                text-decoration: underline;
+
+                &:hover,
+                &:visited {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        svg {
+            filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.527));
+            fill: #fff;
+            margin: 0 5px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+.TikSidebar {
+    z-index: 50;
+    display: flex;
+
+    div {
+        z-index: 10000;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
+    div:nth-child(1) {
+        background: #ff5c4c;
+    }
+
+    div:nth-child(2) {
+        background: #ffbf38;
+    }
+
+    div:nth-child(3) {
+        background: #66e14f;
+    }
+}

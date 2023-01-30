@@ -5,7 +5,7 @@ import '../Sass/Modal.scss'
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import { AiOutlineZoomIn } from "react-icons/ai";
+import { AiOutlineZoomIn, AiFillGithub } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { Avatar, Card, Modal, Skeleton, Button } from 'antd';
 import projects from '../Projects';
@@ -19,7 +19,7 @@ const Project = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
-        }, 2000);
+        }, 1000);
     }, []);
 
     // Variable d'état qui permet de récupérer le bon projet et l'afficher lorsque la modale est activée 
@@ -40,7 +40,7 @@ const Project = () => {
                 cover={
                     <img
                         alt={project.title}
-                        src={project.img}
+                        src={project.img_header}
                     />
                 }
                 actions={[
@@ -50,7 +50,7 @@ const Project = () => {
                         {/* Si le projet correspond à l'index du projet sur lequel on clique, la modale sera affichée */}
                         {openModalIndex === project && (
                             <Modal
-                                title={project.title}
+                                width={1000}
                                 open={openModalIndex}
                                 onCancel={() => setOpenModalIndex(null)}
                                 footer={[
@@ -59,22 +59,45 @@ const Project = () => {
                                     </Button>
                                 ]}
                             >
-                                <h1>{project.title}</h1>
-                                <p>{project.desc}</p>
+                                <div className='TikSidebar'>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div className="project-wrapper">
+                                    <div className="project-left-wrapper">
+                                        {project.img_project.map(img => (
+                                            <img key={img} src={img} alt={project.title} />
+                                        ))}
+                                    </div>
+                                    <div className="project-right-wrapper">
+                                        <h1>{project.title}</h1>
+                                        <p>{project.desc}</p>
+                                        {project.git && <p><AiFillGithub /><a href="https://github.com/AndelysP?tab=repositories" target="_blank">Lien vers mon projet Github</a></p>}
+
+                                        <p>Langages utilisés :
+                                            {project.technos.map(techno => <span>{techno}</span>
+                                            )}
+                                        </p>
+                                    </div>
+                                </div>
+
+
                             </Modal>
                         )}
                     </>
                 ]}
             >
-                {isLoading ? (
-                    <Skeleton active />
-                ) : (
-                    <Meta
-                        avatar={<Avatar src="https://cdn-icons-png.flaticon.com/512/547/547440.png" />}
-                        title={project.title}
-                        description={project.desc}
-                    />)}
-            </Card>
+                {
+                    isLoading ? (
+                        <Skeleton active />
+                    ) : (
+                        <Meta
+                            avatar={<Avatar src="https://cdn-icons-png.flaticon.com/512/547/547440.png" />}
+                            title={project.title}
+                            description={project.desc.length > 80 ? project.desc.substring(0, 80) + "..." : project.desc}
+                        />)}
+            </Card >
 
 
         </>

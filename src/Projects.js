@@ -11,6 +11,7 @@ import {IoLogoJavascript} from "react-icons/io";
 
 // Images/Technos du projet 3
 import workInProgress from './img-work/work.png'
+import project3 from './img-work/project3/cakes3000.png'
 
 
 const projects = [
@@ -28,8 +29,8 @@ const projects = [
         id: 2,
         img_header: 'https://images.pexels.com/photos/5082566/pexels-photo-5082566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         img_project:[workInProgress],
-        title: 'Cine+',
-        desc: 'Cine+ est une reproduction d\'un site de streaming de films, il a été réalisé à l\'aide d\'une API',
+        title: 'Cinetopia',
+        desc: 'Cinetopia est une reproduction d\'un site de streaming de films, il a été réalisé à l\'aide d\'une API',
         technos: [],
         link: "",
         git: false
@@ -39,11 +40,31 @@ const projects = [
         img_header: 'https://images.pexels.com/photos/1233319/pexels-photo-1233319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         img_project:[workInProgress],
         title: 'Drinks 3000',
-        desc: 'Création d\'un site de boisson énergisante personnalisées',
+        desc: 'Création d\'un site de boissons énergisantes personnalisées',
         technos: [],
         link: "",
         git: false
     },
+    {
+        id: 3,
+        img_header: 'https://images.pexels.com/photos/776654/pexels-photo-776654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        img_project:[workInProgress],
+        title: 'Luthopia',
+        desc: '[Cette catégorie est en cours de construction, elle sera bientôt mise à jour !] Site de vente de jeu de société réalisé avec React, MySQL et PHP. Il y a la possibilité d\'en savoir plus sur chaque jeu en cliquant dessus, mise en place d\'un panier avec le montant et la quantité de chaque item, et il y a également une barre de recherche permettant de rechercher un jeu spécifique.',
+        technos: [],
+        link: "",
+        git: false
+    },
+    {
+        id: 3,
+        img_header: 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/fr_CA/games/switch/s/super-smash-bros-ultimate-switch/hero',
+        img_project:[workInProgress],
+        title: 'Super Smash Bros - Fighter',
+        desc: '[Cette catégorie est en cours de construction, elle sera bientôt mise à jour !] Création d\'un jeu opposant deux personnages, celui sélectionné contre un bot, avec la possibilité de lancer des attaques qui font descendre la barre de vie de chaque personnage. Le jeu a été créé avec PHP pour mettre en pratique la notion de class et de méthodes.',
+        technos: [],
+        link: "",
+        git: false
+    }
 ];
 
 

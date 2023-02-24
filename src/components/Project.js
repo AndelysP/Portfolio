@@ -45,7 +45,7 @@ const Project = () => {
                 }
                 actions={[
                     <>
-                        <p onClick={() => setOpenModalIndex(project)}>En savoir plus</p><AiOutlineZoomIn />
+                        <p className="more" onClick={() => setOpenModalIndex(project)}>En savoir plus<AiOutlineZoomIn /></p>
 
                         {/* Si le projet correspond à l'index du projet sur lequel on clique, la modale sera affichée */}
                         {openModalIndex === project && (

@@ -155,7 +155,7 @@
     .ant-modal-title,
     .ant-btn-default {
         background: rgba(255, 255, 255, 0.01);
-        backdrop-filter: blur(40px);
+        backdrop-filter: blur(50px);
         color: rgb(255, 255, 255);
         text-shadow: 6px 1px 10px rgb(0, 0, 0);
     }
@@ -256,11 +256,9 @@
 
 
 .TikSidebar {
-    z-index: 50;
     display: flex;
 
     div {
-        z-index: 10000;
         width: 15px;
         height: 15px;
         margin-right: 10px;

@@ -95,7 +95,7 @@ const Project = () => {
                         <Meta
                             avatar={<Avatar src="https://cdn-icons-png.flaticon.com/512/547/547440.png" />}
                             title={project.title}
-                            description={project.desc.length > 80 ? project.desc.substring(0, 80) + "..." : project.desc}
+                            description={project.desc.length >  68 ? project.desc.substring(0, 68) + "..." : project.desc}
                         />)}
             </Card >
 

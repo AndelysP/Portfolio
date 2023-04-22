@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import { Avatar, Card, Modal, Skeleton, Button } from 'antd';
 import projects from '../Projects';
 import Cursor from './Cursor';
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 const Project = () => {
 
@@ -65,7 +67,13 @@ const Project = () => {
                                 <div className="project-wrapper">
                                     <div className="project-left-wrapper">
                                         {project.img_project.map(img => (
-                                            <img key={img} src={img} alt={project.title} />
+                                            <Zoom>
+                                                <img
+                                                    alt={project.title}
+                                                    src={img}
+                                                />
+                                            </Zoom>
+
                                         ))}
                                     </div>
                                     <div className="project-right-wrapper">
@@ -80,8 +88,6 @@ const Project = () => {
                                         </p>
                                     </div>
                                 </div>
-
-
                             </Modal>
                         )}
                     </>
@@ -94,7 +100,7 @@ const Project = () => {
                         <Meta
                             avatar={<Avatar src="https://cdn-icons-png.flaticon.com/512/547/547440.png" />}
                             title={project.title}
-                            description={project.desc.length >  68 ? project.desc.substring(0, 68) + "..." : project.desc}
+                            description={project.desc.length > 68 ? project.desc.substring(0, 68) + "..." : project.desc}
                         />)}
             </Card >
 

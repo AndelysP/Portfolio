@@ -25,8 +25,6 @@ const Project = () => {
     // Variable d'état qui permet de récupérer le bon projet et l'afficher lorsque la modale est activée 
     const [openModalIndex, setOpenModalIndex] = useState(null);
 
-    //
-
     const { Meta } = Card;
     const listProjects = projects.map(project =>
         <>
@@ -72,6 +70,7 @@ const Project = () => {
                                     </div>
                                     <div className="project-right-wrapper">
                                         <h1>{project.title}</h1>
+                                        <a href={project.link} target='_blank'>{project.link}</a>
                                         <p>{project.desc}</p>
                                         {project.git && <p><AiFillGithub /><a href="https://github.com/AndelysP?tab=repositories" target="_blank">Lien vers mon projet Github</a></p>}
 
@@ -121,7 +120,7 @@ const Project = () => {
                 </div>
 
                 <div id="work">
-                    <h2>La fonction "En savoir plus" est en cours de développement !</h2>
+                    <h2>Voici les divers projets que j'ai pu réaliser</h2>
                     <div className='listProjects'>
                         {listProjects}
                     </div>

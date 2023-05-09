@@ -1,6 +1,6 @@
 import React from 'react';
-import '../Sass/Welcome.scss';
-import neptune from '../img/neptune.png'
+import '../assets/sass/Welcome.scss';
+import neptune from '../assets/img/neptune.png'
 import { Link } from 'react-router-dom';
 import Cursor from './Cursor';
 

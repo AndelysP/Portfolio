@@ -1,0 +1,295 @@
+.container {
+    margin: 0 auto;
+    padding: 40px 0;
+    max-width: 1200px;
+}
+
+
+.page-control {
+    visibility: visible;
+
+    svg {
+        width: 40px;
+        height: 40px;
+        fill: rgb(218, 218, 218);
+        padding: 0;
+        margin: 0;
+        display: block;
+        position: absolute;
+        top: calc(50% - 18.5px);
+        left: calc(50% - 18px);
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .next {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        position: fixed;
+        top: 25%;
+        height: 50%;
+        right: 0;
+        width: 80px;
+        z-index: 3;
+    }
+
+    .prev {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        position: fixed;
+        top: 25%;
+        height: 50%;
+        left: 0;
+        width: 80px;
+        z-index: 3;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .page-control {
+        visibility: hidden;
+    }
+
+    figcaption {
+        p {
+            margin: 0;
+        }
+    }
+}
+
+// Pour régler le bug d'affichage du footer sur la page Mes projets sur grand écran
+@media only screen and (min-width:2000px) {
+    #work {
+        height: 95vh;
+    }
+}
+
+// Style du composant Card de Ant Design
+
+#work {
+    max-width: 2000px;
+    margin: 0 auto;
+
+    h2 {
+        color: rgb(238, 250, 249);
+        text-align: center;
+        font-family: 'Space Mono', monospace;
+        font-weight: 400;
+    }
+
+    .displayList {
+        margin: 1rem;
+    }
+
+    .listProjects {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .ant-card-cover {
+            height: 20vh;
+            border-radius: 10px;
+            height: 50%;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .ant-card-meta-title {
+            color: #373a44;
+            font-size: 18px;
+        }
+
+        .ant-card-meta-description {
+            height: 50px;
+            color: #373a44;
+        }
+
+        .ant-card {
+            height: 100%;
+
+            &:hover {
+                transform: scale(1.05);
+                border: 4px solid #5be8c969;
+                box-shadow: 5px 15px 30px #5be8c969;
+            }
+        }
+
+        .ant-card-actions {
+            bottom: 0;
+            background: none;
+
+            span {
+                font-size: 15px;
+                color: #373a44;
+
+                svg {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    color: #5dc5af;
+                }
+            }
+        }
+    }
+}
+
+// MODAL
+
+.ant-modal-root {
+    .ant-modal-mask {
+        background-color: rgba(0, 0, 0, 0.0);
+        z-index: 0;
+    }
+
+    .ant-modal-wrap {
+        z-index: 3;
+    }
+
+    .ant-modal-content,
+    .ant-modal-header,
+    .ant-modal-title,
+    .ant-btn-default {
+        background: rgba(255, 255, 255, 0.01);
+        backdrop-filter: blur(50px);
+        color: rgb(255, 255, 255);
+        text-shadow: 6px 1px 10px rgb(0, 0, 0);
+    }
+
+    .ant-btn-default {
+        border: 0.1px solid #5be8c9;
+
+        &:hover {
+            border: none;
+            color: white;
+            background-color: #5BE8C9;
+            transform: scale(1.12);
+            cursor: pointer;
+        }
+    }
+
+    .ant-modal-close {
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.ant-card-actions {
+    .more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    svg {
+        margin-left: 10px;
+    }
+}
+
+.project-wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+
+    .project-left-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+
+        img {
+            flex-basis: 33.33%;
+            border-radius: 10px;
+            max-width: 60%;
+            margin: 6px;
+
+            @media screen and (max-width: 768px) {
+                max-width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    .project-right-wrapper {
+        width: 50%;
+        padding-top: 1rem;
+        font-size: 15px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        a {
+            color: #82bef0;
+
+            &:hover {
+                color: #659dca;
+            }
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+
+            a {
+                color: #fff;
+                text-decoration: underline;
+
+                &:hover,
+                &:visited {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        svg {
+            filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.527));
+            fill: #fff;
+            margin: 0 5px;
+            font-size: 25px;
+        }
+    }
+}
+
+
+.TikSidebar {
+    display: flex;
+
+    div {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
+    div:nth-child(1) {
+        background: #ff5c4c;
+    }
+
+    div:nth-child(2) {
+        background: #ffbf38;
+    }
+
+    div:nth-child(3) {
+        background: #66e14f;
+    }
+}

@@ -1,0 +1,168 @@
+.container {
+    margin: 0 auto;
+    padding: 40px 0;
+    max-width: 1200px;
+}
+
+#about {
+    .title {
+        padding: 1rem;
+
+        p {
+            color: rgb(194, 194, 194);
+            font-size: 0.9rem;
+
+            span {
+                color: #5be8c9;
+            }
+        }
+
+        .hard-skills svg {
+            font-size: 2rem;
+        }
+
+        h2 {
+            color: #5BE8C9;
+            font-family: 'pokemon_classic';
+            font-size: 1.3rem;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            color: white;
+            border: #5BE8C9 solid 0.1rem;
+            border-radius: 20px;
+            background-color: transparent;
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            transition: all 0.2s ease-in-out;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+
+            &:hover {
+                background-color: #5BE8C9;
+                transform: scale(1.12);
+                cursor: pointer;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            svg {
+                font-size: 1.3rem;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    .img-container {
+        padding: 1rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            -webkit-tap-highlight-color: transparent;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        span {
+            text-align: center;
+            color: white;
+            font-size: 0.8rem;
+            padding-left: 2rem;
+        }
+    }
+
+    .skills {
+        svg {
+            color: white;
+            font-size: 2.8rem;
+
+            &:hover {
+                color: #5BE8C9;
+            }
+        }
+    }
+
+}
+
+.page-control {
+    visibility: visible;
+
+    svg {
+        width: 40px;
+        height: 40px;
+        fill: rgb(218, 218, 218);
+        padding: 0;
+        margin: 0;
+        display: block;
+        position: absolute;
+        top: calc(50% - 18.5px);
+        left: calc(50% - 18px);
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    a {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        position: fixed;
+        top: 25%;
+        height: 50%;
+        right: 0;
+        width: 80px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .page-control {
+        visibility: hidden;
+    }
+
+    .img-container {
+        width: 22rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+
+    .img-container {
+        width: 130rem;
+
+        img {
+            width: 100%;
+            animation: float 6s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}

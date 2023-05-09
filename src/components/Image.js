@@ -1,34 +1,22 @@
-import me from '../img-me/me.png';
-import astronaut from '../img-me/me-astronaut.png';
-import { Component } from 'react';
+import me from '../assets/img-me/me.webp';
+import astronaut from '../assets/img-me/me-astronaut.webp';
+import React, { useState } from 'react';
 
-class Image extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            images: [me, astronaut],
-            index: 0
-        };
-        this.handleClick = this.handleClick.bind(this);
-    }
-    
-    /**
-     * Si l'index est égal à la longueur du tableau, l'index est sur 0. Sinon, il est incrémenté de 1
-     */
-    handleClick() {
-       if (this.state.index === this.state.images.length -1) {
-        this.setState({index:0});
-       } else {
-        this.setState({index: this.state.index+1});
-       }        
-    }
+function Image() {
+  const [images] = useState([me, astronaut]);
+  const [index, setIndex] = useState(0);
 
-    render() {
-        const currentImage = this.state.images[this.state.index]
-        return (
-            <img src={currentImage} alt="" onClick={this.handleClick}/>
-        )
+  const handleClick = () => {
+    if (index === images.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
     }
+  };
+
+  const currentImage = images[index];
+
+  return <img src={currentImage} alt="Andélys" onClick={handleClick} />;
 }
 
-export default Image
+export default Image;

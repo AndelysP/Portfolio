@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Sass/NotFound.scss'
+import '../assets/sass/NotFound.scss'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
 import Cursor from './Cursor'

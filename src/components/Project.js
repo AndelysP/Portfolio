@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import '../Sass/Project.scss'
-import '../Sass/App.scss'
-import '../Sass/Modal.scss'
+import '../assets/sass/Project.scss'
+import '../assets/sass/App.scss'
+import '../assets/sass/Modal.scss'
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
@@ -28,13 +28,12 @@ const Project = () => {
     const [openModalIndex, setOpenModalIndex] = useState(null);
 
     const { Meta } = Card;
-    const listProjects = projects.map(project =>
-        <>
+    const listProjects = projects.map((project, index) =>
+        <div className='displayList' key={index}>
             <Card
-                key={project.id}
+                key={index}
                 style={{
-                    width: 380,
-                    margin: 20
+                    width: 365,
                 }}
 
                 cover={
@@ -66,8 +65,8 @@ const Project = () => {
                                 </div>
                                 <div className="project-wrapper">
                                     <div className="project-left-wrapper">
-                                        {project.img_project.map(img => (
-                                            <Zoom>
+                                        {project.img_project.map((img, index) => (
+                                            <Zoom key={index}>
                                                 <img
                                                     alt={project.title}
                                                     src={img}
@@ -78,12 +77,12 @@ const Project = () => {
                                     </div>
                                     <div className="project-right-wrapper">
                                         <h1>{project.title}</h1>
-                                        <a href={project.link} target='_blank'>{project.link}</a>
+                                        <a href={project.link} target='_blank' rel="noreferrer">{project.link}</a>
                                         <p>{project.desc}</p>
-                                        {project.git && <p><AiFillGithub /><a href="https://github.com/AndelysP?tab=repositories" target="_blank">Lien vers mon projet Github</a></p>}
+                                        {project.git && <p><AiFillGithub /><a href="https://github.com/AndelysP?tab=repositories" target="_blank" rel="noreferrer">Lien vers mon projet Github</a></p>}
 
                                         <p>Langages utilisés :
-                                            {project.technos.map(techno => <span>{techno}</span>
+                                            {project.technos.map((techno, index) => <span key={index}>{techno}</span>
                                             )}
                                         </p>
                                     </div>
@@ -98,14 +97,14 @@ const Project = () => {
                         <Skeleton active />
                     ) : (
                         <Meta
-                            avatar={<Avatar src="https://cdn-icons-png.flaticon.com/512/547/547440.png" />}
+                            avatar={<Avatar src="https://cdn-icons-png.flaticon.com/512/547/547440.png" alt="Icon projet" />}
                             title={project.title}
                             description={project.desc.length > 68 ? project.desc.substring(0, 68) + "..." : project.desc}
                         />)}
             </Card >
 
 
-        </>
+        </div>
     );
 
 
@@ -116,11 +115,11 @@ const Project = () => {
             <div className="noise">
                 <Navbar />
                 <div className="page-control">
-                    <Link to="/contact" className="next">
+                    <Link to="/contact" className="next" aria-label="Lien vers la page de contact">
                         <span><FaChevronRight /></span>
                     </Link>
 
-                    <Link to="/about" className="prev">
+                    <Link to="/about" className="prev" aria-label="Lien vers la page à propos">
                         <span><FaChevronLeft /></span>
                     </Link>
                 </div>

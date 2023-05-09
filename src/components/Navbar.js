@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Sass/Navbar.scss'
+import '../assets/sass/Navbar.scss'
 import { RxCross1 } from "react-icons/rx";
 import { HiBars3 } from "react-icons/hi2";
 import { useRef } from 'react';
@@ -17,7 +17,7 @@ const Navbar = () => {
         <header>
             <div className="navbar">
                 <div className="home">
-                    <span><Link to="/"><IoPlanetOutline /></Link></span>
+                    <span><Link to="/" aria-label="Lien vers la page d'accueil"><IoPlanetOutline /></Link></span>
                 </div>
                 <nav ref={navRef}>
                     <a href="/about">A propos de moi</a>

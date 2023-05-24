@@ -1,9 +1,8 @@
 import { AiFillAndroid, AiOutlineAntDesign } from "react-icons/ai";
 import { DiReact } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
-import { FaPhp, FaNodeJs } from "react-icons/fa";
+import { FaPhp, FaNodeJs, FaVuejs, FaCss3Alt, FaSass } from "react-icons/fa";
 import { SiMongodb, SiJsonwebtokens } from "react-icons/si";
-import workInProgress from './assets/img-work/work.png'
 
 // Projet Super Smash Bros
 import duel1 from './assets/img-work/project3/screen1.webp';
@@ -28,6 +27,16 @@ import headerBored from './assets/img-work/project2/background.webp';
 import bored1 from './assets/img-work/project2/screen1.webp';
 import bored2 from './assets/img-work/project2/screen2.webp';
 import bored3 from './assets/img-work/project2/screen3.webp';
+
+// Projet Anime 
+import animeBackground from './assets/img-work/project5/background.webp';
+import anime1 from './assets/img-work/project5/screen1.webp';
+import anime2 from './assets/img-work/project5/screen2.webp';
+
+// Projet Cartes
+import cardBackground from './assets/img-work/project6/background.webp';
+import card1 from './assets/img-work/project6/screen1.webp';
+import card2 from './assets/img-work/project6/screen2.webp';
 
 const projects = [
     {
@@ -72,13 +81,23 @@ const projects = [
     },
     {
         id: 5,
-        img_header: 'https://images.pexels.com/photos/1233319/pexels-photo-1233319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        img_project: [workInProgress],
-        title: 'Drinks 3000',
-        desc: 'Création d\'un site de vente de boissons énergisantes personnalisées',
-        technos: [],
-        link: "",
-        git: false
+        img_header: animeBackground,
+        img_project: [anime1, anime2],
+        title: 'Anime Tracker App ⛩️',
+        desc: 'Cette application permet de rechercher et de suivre ses animés préférées grâce à une fonctionnalité de recherche avec un suivi des épisodes. Il suffit de saisir le titre de l\'anime que vous recherchez et en un instant l\'algorithme vous fournira les résultats les plus pertinents. Il y a également une fonctionnalité de suivi des épisodes pour vous aider à garder une trace de votre progression. Plus besoin de vous demander où vous en êtes le site met automatiquement à jour le nombre d\'épisodes que vous avez visionnés. Profitez pleinement de vos animes en gardant une vue d\'ensemble claire sur les épisodes en cours.',
+        technos: [<FaVuejs />, <FaCss3Alt />],
+        link: 'https://animetrackerapp.vercel.app/',
+        git: true
+    },
+    {
+        id: 6,
+        img_header: cardBackground,
+        img_project: [card1, card2],
+        title: 'Card Game App 🃏',
+        desc: 'L\'application propose deux modes de jeu. Le premier mode vous invite à plonger dans le célèbre jeu de cartes "Bataille" où vous serez confronté à un adversaire virtuel. Mais ce n\'est pas tout ! Le second jeu vous met au défi de jouer une carte de même suite mais d\'une valeur supérieure à celle du bot pour remporter la partie.',
+        technos: [<DiReact />, <FaSass />],
+        link: "https://game-card-app.vercel.app/",
+        git: true
     },
 ];
 

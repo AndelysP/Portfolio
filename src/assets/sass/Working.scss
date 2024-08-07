@@ -1,0 +1,38 @@
+#waiting {
+    .title {
+        padding: 1rem;
+
+        p {
+            color: rgb(194, 194, 194);
+            font-size: 1.3rem;
+            width: 70%;
+            text-align: center;
+
+            span {
+                color: #5be8c9;
+            }
+        }
+
+        h2 {
+            color: #5BE8C9;
+            font-family: 'pokemon_classic';
+            font-size: 2rem;
+            width: 70%;
+            text-align: center;
+        }
+
+    }
+
+    .wip {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}

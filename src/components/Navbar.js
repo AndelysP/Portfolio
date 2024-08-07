@@ -14,25 +14,29 @@ const Navbar = () => {
     }
 
     return (
-        <header>
-            <div className="navbar">
-                <div className="home">
-                    <span><Link to="/" aria-label="Lien vers la page d'accueil"><IoPlanetOutline /></Link></span>
-                </div>
-                <nav ref={navRef}>
-                    <a href="/about">A propos de moi</a>
+      <header>
+        <div className="navbar">
+          <div className="home">
+            {/* <span>
+              <Link to="/" aria-label="Lien vers la page d'accueil">
+                <IoPlanetOutline />
+              </Link>
+            </span> */}
+          </div>
+          <nav ref={navRef}>
+            {/* <a href="/about">A propos de moi</a>
                     <a href="/work">Mes projets</a>
-                    <a href="/contact">Contact</a>
-                    <button className='nav-btn nav-close-btn' onClick={showNavbar}>
-                        <RxCross1 />
-                    </button>
-                </nav>
-                <button className='nav-btn' onClick={showNavbar}>
-                    <HiBars3 />
-                </button>
-            </div>
-        </header>
-    )
+                    <a href="/contact">Contact</a> */}
+            <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+              <RxCross1 />
+            </button>
+          </nav>
+          <button className="nav-btn" onClick={showNavbar}>
+            <HiBars3 />
+          </button>
+        </div>
+      </header>
+    );
 }
 
 export default Navbar

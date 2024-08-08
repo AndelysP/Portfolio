@@ -35,4 +35,21 @@
             height: 200px;
         }
     }
+@media only screen and (max-width: 767px) {
+    .wip {}
+
+    .title {
+        p {
+            font-size: 1rem;
+            width: 70%;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            width: 70%;
+        }
+
+    }
+
+}
 }
